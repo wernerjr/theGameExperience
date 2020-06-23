@@ -6,9 +6,9 @@ let personagem;
 
 
 function preload() {
-  imagemCenario = loadImage('../src/assets/imagens/cenario/floresta.png');
-  imagemPersonagem = loadImage('../src/assets/imagens/personagem/correndo.png');
-  somDoJogo = loadSound('../src/assets/sons/trilha_jogo.mp3');
+  imagemCenario = loadImage('./assets/imagens/cenario/floresta.png');
+  imagemPersonagem = loadImage('./assets/imagens/personagem/correndo.png');
+  somDoJogo = loadSound('./assets/sons/trilha_jogo.mp3');
 }
 
 function setup() {
