@@ -14,8 +14,10 @@ let pontuacao;
 let jogo;
 let telaInicial;
 let botaoGerenciador;
+let imagemPassaro;
 
 let cenaAtual = 'telaInicial';
 let cenas;
 
 const inimigos = [];
+const passaros = [];
