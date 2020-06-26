@@ -30,6 +30,11 @@ class Jogo {
   draw(){
     cenario.exibe();
     cenario.move();
+
+    passaros.forEach(passaro => {
+      passaro.exibe();
+      passaro.move();
+    })
     
     pontuacao.exibe();
     pontuacao.adicionarPonto();
@@ -50,11 +55,6 @@ class Jogo {
       }
       inimigo.velocidade = parseInt(random(10, 30));
     }
-
-    passaros.forEach(passaro => {
-      passaro.exibe();
-      passaro.move();
-    })
   
     if(personagem.estaColidindo(inimigo) ){
       image(imagemGameOver, width / 2 - 200, height / 3)
