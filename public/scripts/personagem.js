@@ -10,12 +10,14 @@ class Personagem extends Animacao {
     this.gravidade = 6;
     this.alturaDoPulo = -50;
     this.pulos = 0;
+    this.invencivel = false;
   }
 
   pula(){
     this.pulos++;
     if(this.pulos < 3){
       this.velocidadePulo = this.alturaDoPulo; 
+      somDoPulo.play();
     }
   }
 
@@ -29,7 +31,18 @@ class Personagem extends Animacao {
     }
   }
 
+  ficarInvencivel(){
+    this.invencivel = true;
+    setTimeout(() => {
+      this.invencivel = false
+    }, 1000);
+  }
+
   estaColidindo(inimigo){
+    if(this.invencivel){
+      return false;
+    }
+
     const precisao = .7;
     //noFill();
     //rect(this.x, this.y, this.largura * precisao, this.altura);
